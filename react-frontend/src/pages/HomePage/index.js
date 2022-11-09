@@ -1,6 +1,6 @@
 const HomePage = () => {
     return ( <>
-    <h1>CarbonAltDel</h1>
+    <h1>CarbonAltDel Homepage</h1>
     </> );
 }
  
