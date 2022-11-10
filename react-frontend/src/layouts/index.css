@@ -15,3 +15,13 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: var(--dark-color);
 }
+
+/* footer */
+
+footer a{
+    color: var(--dark-color);
+}
+
+footer a:hover{
+    color: var(--medium-color);
+}
