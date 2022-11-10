@@ -1,0 +1,114 @@
+:root {
+    --dark-color: #2F3E46;
+    --medium-color: #52796f;
+    --light-color: #84a98c;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1440px;
+    margin: auto;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* nav bar */
+
+.nav {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.logo {
+    color: var(--dark-color);
+    font-size: 36px;
+    font-weight: bold;
+    padding: 0 0 0 50px;
+}
+.nav-links {
+    color: var(--light-color);
+    font-size: 20px;
+    padding: 0 50px 0 0;
+}
+
+/* video header */
+
+video {
+    width: 100%;
+    height: auto;
+}
+.home-video{
+    position: relative;
+}
+.slogan {
+    width: 440px;
+    background-color: #f0f0f015;
+    border: solid 1px #595959;
+    padding: 20px;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+    z-index: 10;
+}
+
+/* how we work section */
+
+.how-it-works {
+    display: flex;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 100px 0 100px 0;
+}
+.main-points {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f9f9f9;
+    padding:
+}
+.join {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.compare {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.offset {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    height: 87px;
+    border-top: 1px solid #f5f5f5;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 100;
+    color: var(--dark-color);
+}
+ul {
+    list-style-type: none;
+}
+li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
