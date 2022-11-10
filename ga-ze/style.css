@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+a:visited {
+    color: var(--light-color);
+}
+
 body {
     max-width: 1440px;
     margin: auto;
@@ -34,7 +38,26 @@ body {
 .nav-links {
     color: var(--light-color);
     font-size: 20px;
-    padding: 0 50px 0 0;
+    padding: 0 50px 0 0px;
+    position: relative;
+    display: inline-block;
+}
+.nav-menu {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color: white;
+    /* box-shadow: 0 3px 3px 0; */
+    z-index: 1;
+}
+.nav-menu a {
+    colour: var(--light-color);
+    padding: 10px 12px 10px 12px;
+    text-decoration: none;
+    display: block;
+}
+.nav-links:hover .nav-menu {
+    display: block;
 }
 
 /* video header */
