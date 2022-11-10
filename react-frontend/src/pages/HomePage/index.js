@@ -1,6 +1,8 @@
+import MyVideo from './openingvid.mp4';
+
 const HomePage = () => {
     return ( <>
-    <h1>CarbonAltDel Homepage</h1>
+    <video autostart autoPlay loop muted src={MyVideo} type="video/mp4" class="w-100 h-100 mh-vh"/>
     </> );
 }
  

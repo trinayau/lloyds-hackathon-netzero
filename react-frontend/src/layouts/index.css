@@ -1,4 +1,17 @@
-body{
-    background-color: #F9F9F9;
+:root {
+    --dark-color: #2F3E46;
+    --medium-color: #52796f;
+    --light-color: #84a98c;
 }
 
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-color);
+}
