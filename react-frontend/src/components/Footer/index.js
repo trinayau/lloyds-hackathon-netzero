@@ -8,16 +8,23 @@ const Footer = () => {
     return ( 
         <Paper sx={{marginTop: 'calc(10% + 60px)', bottom:0, width: '100%',
         position: 'fixed', }} component="footer" square variant="outlined">
-      <Container maxWidth="lg">
+      <Container maxWidth="false">
         <Box
           sx={{
             flexGrow: 1,
-            justifyContent: "center",
+            justifyContent: "space-between",
+            alignItems: "center",
+            textAlign: "center",
             display: "flex",
+            flexDirection: "row",
             my:1
           }}
         >
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily:'Montserrat' }}> Contact Us </Typography><MailOutlineIcon fontSize="medium" sx={{marginTop: '4px'}} /> <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily:'Montserrat' }}> Email </Typography><LocalPhoneIcon fontSize="medium" sx={{marginTop: '4px'}}/> <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily:'Montserrat' }}> Phone </Typography>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily:'Montserrat' }}> Contact Us </Typography>
+
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily:'Montserrat' }}> Email: a@a.com </Typography>
+
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily:'Montserrat' }}> Phone </Typography>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily:'Montserrat' }}> About Us </Typography>
         </Box>
 
