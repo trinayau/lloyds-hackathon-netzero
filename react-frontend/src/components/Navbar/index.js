@@ -38,7 +38,7 @@ function NavBar() {
   return (
     <AppBar position="static" style={{background:'#ffffff', boxShadow: "1px"}}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters >
+        <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
           
           <Typography
             variant="h6"
@@ -46,7 +46,7 @@ function NavBar() {
             component="a"
             href="/"
             sx={{
-              display: { xs: 'none', md: 'flex', lg: 'flex', xl: 'flex', flexDirection: 'row', alignItems: 'start', justifyContent: 'start'},
+              display: { xs: 'none', md: 'flex', lg: 'flex', xl: 'flex', flexDirection: 'row', marginLeft: "auto" },
               fontFamily: 'montserrat',
               fontWeight: 700,
               color: '#52796F',
@@ -55,6 +55,7 @@ function NavBar() {
           >
             CarbonAltDel
           </Typography>
+          <div/>
  {/* Mobile */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
