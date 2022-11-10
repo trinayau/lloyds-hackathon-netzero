@@ -191,7 +191,7 @@ section {
     grid-column-gap: 65px;
     grid-row-gap: 45px;
     justify-items: center;
-    padding: 0 0 100px 0;
+    padding: 0 150px 100px 150px;
 }
 
 .product-box {
