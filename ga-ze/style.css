@@ -8,7 +8,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+a {
+    text-decoration: none;
+}
 a:visited {
     color: var(--light-color);
 }
@@ -59,6 +61,7 @@ body {
     background-color: white;
     right: 0px;
     top: 50px;
+    font-size: 15px;;
     /* box-shadow: 0 3px 3px 0; */
     z-index: 1;
 }
@@ -127,10 +130,15 @@ h4 {
 }
 
 /* about us */
-
 .about {
     background-color: #f9f9f9;
-    padding: 100px 100px 100px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-text {
+    padding: 100px 100px 50px 50px;
     font-size: 14px;
     line-height: 20px;
 }
@@ -138,6 +146,17 @@ h3 {
     padding-bottom: 15px;
     color: var(--light-color);
 }
+.register {
+    width: 200px;
+    border: 1px solid #f5f5f5;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-bottom: 100px;
+    color: var(--medium-color)
+}
+
 
 /* Footer */
 
