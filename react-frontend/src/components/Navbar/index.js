@@ -36,7 +36,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static" style={{background:'#ffffff', boxShadow: "none"}}>
+    <AppBar position="static" style={{background:'#ffffff', boxShadow: "1px"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters >
           
@@ -46,12 +46,10 @@ function NavBar() {
             component="a"
             href="/"
             sx={{
-              display: { xs: 'none', md: 'flex', lg: 'flex', xl: 'flex', flexDirection: 'row', alignItems: 'left', justifyContent: 'start'},
+              display: { xs: 'none', md: 'flex', lg: 'flex', xl: 'flex', flexDirection: 'row', alignItems: 'start', justifyContent: 'start'},
               fontFamily: 'montserrat',
               fontWeight: 700,
-              fontSize:24,
-              lineSpacing: '0.1px',
-              color: '#000000',
+              color: '#52796F',
               textDecoration: 'none',
             }}
           >
@@ -102,10 +100,10 @@ function NavBar() {
             href="/"
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'none' },
+              display: { xs: 'flex', md: 'none', flexDirection: 'row', alignItems: 'start', justifyContent: 'start'},
               flexGrow: 1,
               fontFamily: 'montserrat',
-              fontWeight: 700,
+              fontWeight: 600,
               letterSpacing: '0rem',
               color: '#2F3E46',
               textDecoration: 'none',

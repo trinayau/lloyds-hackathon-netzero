@@ -25,20 +25,12 @@ Lloyds Banking Group Athena Virtual Hackathon - Journey to Net Zero Entry by @tr
 # Installation and Usage
 ## How to run the app locally
 - Clone the repo
-- Run `npm install` in the root directory
-- Run `npm start` in the root directory
+- Run `npm install` in the `react-frontend` directory in the terminal
+- Run `npm start` in the `react-frontend` directory in the terminal
 - Open `localhost:3000` in your browser
-
-## How to run the server
-- Clone the repo
-- Run `npm install` in the root directory
-- Run `npm run server` in the root directory
-- Open `localhost:5000` in your browser
 
 ## How to run the app in production
 - Open `https://carbonaltdelete.netlify.app/` in your browser
 
-## How to run the server in production
-- Open `https://carbonaltdelete.herokuapp.com/` in your browser
 
  

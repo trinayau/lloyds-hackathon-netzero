@@ -1,7 +1,7 @@
 export const navbarItems = [
     {
-        title: 'Home',
+        title: 'Products',
         url: '/',
-        
+
     }
 ]
