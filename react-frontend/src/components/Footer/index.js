@@ -17,7 +17,7 @@ const Footer = () => {
             my:1
           }}
         >
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily:'Montserrat' }}> Contact Us </Typography><MailOutlineIcon fontSize="medium" sx={{marginTop: '4px'}} /> <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily:'Montserrat' }}> Email </Typography><LocalPhoneIcon /> <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily:'Montserrat' }}> Phone </Typography>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily:'Montserrat' }}> Contact Us </Typography><MailOutlineIcon fontSize="medium" sx={{marginTop: '4px'}} /> <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily:'Montserrat' }}> Email </Typography><LocalPhoneIcon fontSize="medium" sx={{marginTop: '4px'}}/> <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily:'Montserrat' }}> Phone </Typography>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily:'Montserrat' }}> About Us </Typography>
         </Box>
 
