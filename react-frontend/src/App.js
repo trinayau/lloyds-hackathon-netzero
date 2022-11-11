@@ -20,7 +20,7 @@ function App() {
           </Route>
 
           <Route path ="/shoppingcart" element={<ShoppingCartPage />} />
-          <Route path="*" element={NotFoundPage} />
+          <Route path="*" element={<NotFoundPage/>} />
         </Route>
       </Routes>
     </div>

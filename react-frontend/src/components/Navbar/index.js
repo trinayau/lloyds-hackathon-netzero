@@ -15,6 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 const pages = ['Products', 'Pricing', 'Blog'];
 const pageLinks = ['/products', '/pricing', '/blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const loggedIn = false;
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -36,9 +37,9 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static" style={{background:'#ffffff', boxShadow: "1px"}}>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters >
+    <AppBar position="static" style={{background:'#ffffff', boxShadow:'none', padding: 0}}>
+      <Container maxWidth="false" sx={{margin: 0, width: '100%', padding: 0,  }}>
+        <Toolbar disableGutters sx={{ justifyContent: "space-between", padding: 0}}>
           
           <Typography
             variant="h6"
@@ -46,11 +47,20 @@ function NavBar() {
             component="a"
             href="/"
             sx={{
-              display: { xs: 'none', md: 'flex', lg: 'flex', xl: 'flex', flexDirection: 'row', alignItems: 'start', justifyContent: 'start'},
-              fontFamily: 'montserrat',
-              fontWeight: 700,
-              color: '#52796F',
+              display: { xs: 'none', md: 'flex', lg: 'flex', xl: 'flex', flexDirection: 'row', alignItems: 'start', justifyContent: 'start' },
+              fontFamily: 'Montserrat',
+              fontWeight:700,
+              color: '#2F3E46',
+              fontSize:'36px',
               textDecoration: 'none',
+              padding: '32px 0',
+              width: '100%',
+              lineHeight: '1.2',
+              "&:hover": {
+                color: '#52796f',
+                textDecoration: 'none',
+                transition: 'all 0.2s ease-in',
+              },
             }}
           >
             CarbonAltDel
@@ -65,7 +75,7 @@ function NavBar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon sx={{color: 'black'}}/>
+              <MenuIcon sx={{color: '#2E3E46'}}/>
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -105,7 +115,7 @@ function NavBar() {
               fontFamily: 'montserrat',
               fontWeight: 600,
               letterSpacing: '0rem',
-              color: '#2F3E46',
+              color: '#2E3E46',
               textDecoration: 'none',
             }}
           >
@@ -116,7 +126,7 @@ function NavBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: '#2F3E46', display: 'block' }}
+                sx={{ my: 2, color: '#07060A', display: 'block' }}
               >
                 {page}
               </Button>
@@ -125,10 +135,11 @@ function NavBar() {
 {/* End mobile */}
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-
+              {loggedIn ? (
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Kai Mayfair" src="/static/images/avatar/2.jpg" />
               </IconButton>
+              ) : (<></>)}
             </Tooltip>
             <Menu
               sx={{ mt: '45px' }}
