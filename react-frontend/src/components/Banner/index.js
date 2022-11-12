@@ -20,7 +20,7 @@ const Banner = ({MyVideo, buttonText}) => {
           type="video/mp4"
          
         />
-        <div className="content" style={{ justifyContent: "center" }}>
+        <div className="content" style={{ justifyContent: "center", padding: '20px', textAlign:"center" }}>
           <h1>Helping Restaurants Go Net Zero</h1>
           <p>
             Order ingredients from your suppliers and offset your carbon

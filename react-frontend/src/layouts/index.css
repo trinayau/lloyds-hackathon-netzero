@@ -10,11 +10,13 @@
 }
 
 body {
-    margin: auto;
+    margin: auto !important;
+    max-width: 1440px;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     color: var(--dark-color);
 }
+
 
 /* footer */
 
