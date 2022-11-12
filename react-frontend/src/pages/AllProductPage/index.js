@@ -1,4 +1,6 @@
 import './index.css';
+import {ProductCard} from '../../components'
+
 import Butter from './images/butter.svg';
 import Chocolate from './images/chocolate.svg';
 import Flour from './images/flour.svg';
@@ -22,104 +24,14 @@ const AllProductPage = () => {
     </div>
 
     <section>
-        <div className="product-box">
-            <div className="product-img"><img src={Sugar} alt="sugar" /></div>
-            <div className="product-info">
-                <h4>Castor Sugar</h4>
-                Carbon Rating From: A <br/>
-                Price from: $1.99
-            </div>
-            <div className="product-links">
-                <a href="">More Info</a>
-                <div className="add-button"><a href="/">ADD</a></div>
-            </div>
-        </div>
-        <div className="product-box">
-            <div className="product-img"><img src={Raspberries} alt="raspberries" /></div>
-            <div className="product-info">
-                <h4> Raspberries</h4>
-                Carbon Rating From: A <br/>
-                Price from: $1.99
-            </div>
-            <div className="product-links">                
-                <a href="">More Info</a>
-                <div className="add-button"><a href="/">ADD</a></div>
-            </div>
-        </div>
-        <div className="product-box">
-            <div className="product-img"><img src={Flour} alt="flour" /></div>
-            <div className="product-info">
-                <h4>Plain Flour</h4>
-                Carbon Rating From: A <br/>
-                Price from: $1.99
-            </div>
-            <div className="product-links">
-                <a href="">More Info</a>
-                <div className="add-button"><a href="/">ADD</a></div>
-            </div>
-        </div>
-        <div className="product-box">
-            <div className="product-img"><img src={Chocolate} alt="chocolate" /></div>
-            <div className="product-info">
-                <h4>Chocolate</h4>
-                Carbon Rating From: A <br/>
-                Price from: $1.99
-            </div>
-            <div className="product-links">
-                <a href="">More Info</a>
-                <div className="add-button"><a href="/">ADD</a></div>
-                </div>
-        </div>
-        <div className="product-box">
-            <div className="product-img"><img src={Butter} alt="butter" /></div>
-            <div className="product-info">
-                <h4>Butter</h4>
-                Carbon Rating From: A <br/>
-                Price from: $1.99
-            </div>
-            <div className="product-links">
-                <a href="">More Info</a>
-                <div className="add-button"><a href="/">ADD</a></div>
-            </div>
-        </div>
-        <div className="product-box">
-            <div className="product-img"><img src={Orange} alt="orange" /></div>
-            <div className="product-info">
-                <h4>Oranges</h4>
-                Carbon Rating From: A <br/>
-                Price from: $1.99
-            </div>
-            <div className="product-links">
-                <a href="">More Info</a>
-                <div className="add-button"><a href="/">ADD</a></div>
-            </div>
-        </div>
-        <div className="product-box">
-            <div className="product-img"><img src={Eggs} alt="eggs" /></div>
-            <div className="product-info">
-                <h4>Eggs</h4>
-                Carbon Rating From: A <br/>
-                Price from: $1.99
-            </div>
-            <div className="product-links">
-                <a href="">More Info</a>
-                <div className="add-button"><a href="">ADD</a></div>
-            </div>
-        </div>
-        <div className="product-box">
-            <div className="product-img"><img src={Honey} alt="honey" /></div>
-            <div className="product-info">
-                <h4>Honey</h4>
-                Carbon Rating From: A <br/>
-                Price from: $1.99
-            </div>
-            <div className="product-links">
-                <a href="">More Info</a>
-                <div className="add-button"><a href="">ADD</a></div>
-            </div>
-        </div>
-  
-
+        <ProductCard Image={Sugar} Name="Castor Sugar" MinPrice="1.00" MinOffset="0.10" id="1"/>
+        <ProductCard Image={Raspberries} Name="Raspberries" MinPrice="2.00" MinOffset="0.20" id="2"/>
+        <ProductCard Image={Flour} Name="Flour" MinPrice="3.00" MinOffset="0.30" id="3"/>
+        <ProductCard Image={Chocolate} Name="Chocolate" MinPrice="4.00" MinOffset="0.40" id="4"/>
+        <ProductCard Image={Butter} Name="Butter" MinPrice="5.00" MinOffset="0.50" id="5"/>
+        <ProductCard Image={Orange} Name="Orange" MinPrice="6.00" MinOffset="0.60" id="6"/>
+        <ProductCard Image={Honey} Name="Honey" MinPrice="7.00" MinOffset="0.70" id="7"/>
+        <ProductCard Image={Eggs} Name="Eggs" MinPrice="8.00" MinOffset="0.80" id="8"/>
     </section>
     </div> );
 }

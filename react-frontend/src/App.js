@@ -14,8 +14,7 @@ function App() {
           <Route path ="/account" element={<AccountPage />} />
           <Route path ="/orderstatus" element={<OrderStatusPage />} />
           
-          <Route path ="/results">
-            <Route path ="/results" element={<ResultsPage />} />
+          <Route path ="/products">
             <Route path =":productId" element={<SingleProductPage />} />
           </Route>
 
