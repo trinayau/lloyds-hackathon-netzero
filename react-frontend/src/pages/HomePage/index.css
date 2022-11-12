@@ -26,7 +26,7 @@ video {
 .how-it-works {
     display: flex;
     justify-content: center;
-    background-color: #f9f9f9;
+    background-color: var(--bg-color);
     padding: 100px 0 20px 0;
     color: var(--medium-color);
 
@@ -34,7 +34,7 @@ video {
 .main-points {
     display: flex;
     justify-content: space-evenly;
-    background-color: #f9f9f9;
+    background-color: var(--bg-color);
     flex-wrap: wrap;
 }
 .statement {
@@ -56,7 +56,7 @@ h4 {
 
 /* about us */
 .about {
-    background-color: #f9f9f9;
+    background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
     justify-content: center;

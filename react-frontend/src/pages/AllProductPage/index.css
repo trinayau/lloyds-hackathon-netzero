@@ -1,32 +1,8 @@
-/* search bar */
-.search-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f9f9f9;
-    padding: 30px 0 50px 0px;
-}
-.product-heading {
-    font-weight: bold;
-    padding: 0 0 0 50px;
-}
-.search {
-    padding: 6px;
-    border: 1px solid WHITE;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-}
-.search-icon {
-    opacity: 0.2;
-    padding: 0 50px 0 0;
-    height: 13px;
-}
 
 /* product listing */
 
 section {
-    background-color: #f9f9f9;
+    background-color: var(--bg-color);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-column-gap: 65px;
@@ -41,35 +17,9 @@ section {
     border-radius: 8px 8px 0px 0px;
 }
 
-.product-info h4 {
-    padding: 10px 0 10px 0;
-    font-size: 16px;
-}
-.product-info {
-    padding: 0 10px 30px 10px;
-    font-size: 14px;
-}
-
-.product-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px 20px 20px;
-    font-size: 13px;
-}
-.add-button {
-    width: 80px;
-    border: 1px solid #f5f5f5;
-    text-align: center;
-    background-color: white;
-    padding: 5px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    color: var(--medium-color)
-}
 
 .productsPage a{
     text-decoration: none;
-    color: var(    --dark-color)
 }
 
 /* media screens */

@@ -3,11 +3,11 @@ import {Navbar, Footer} from '../components';
 import './index.css';
 
 const Layout = () => {
-    return ( <>
+    return ( <div className="flex-wrapper">
         <Navbar />
         <Outlet/>
         <Footer />
-    </> );
+    </div> );
 }
  
 export default Layout;

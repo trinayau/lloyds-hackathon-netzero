@@ -38,7 +38,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static" style={{background:'#ffffff', boxShadow:'none', padding: 0}}>
+    <AppBar position="static" style={{background:'#ffffff', boxShadow:'none', padding: 0, maxWidth: '100% !important'}}>
       <Container maxWidth="false" sx={{margin: 0, width: '100%', padding: 0,  }}>
         <Toolbar disableGutters sx={{ justifyContent: "space-between", padding: 0}}>
           

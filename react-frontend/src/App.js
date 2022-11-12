@@ -15,7 +15,7 @@ function App() {
           <Route path ="/orderstatus" element={<OrderStatusPage />} />
           
           <Route path ="/products">
-            <Route path =":productId" element={<SingleProductPage />} />
+            <Route path =":productId/:productName" element={<SingleProductPage />} />
           </Route>
 
           <Route path ="/shoppingcart" element={<ShoppingCartPage />} />
