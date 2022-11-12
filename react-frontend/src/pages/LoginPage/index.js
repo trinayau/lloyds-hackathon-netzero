@@ -12,6 +12,8 @@ import LockIcon from '@mui/icons-material/Lock';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import MyVideo from '../HomePage/openingvid.mp4';
+import {Banner} from '../../components';
 
 function Copyright(props) {
   
@@ -41,6 +43,7 @@ export default function LoginPage() {
 
   return (
     <ThemeProvider theme={theme}>
+      <Banner MyVideo={MyVideo} buttonText={""}/>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box

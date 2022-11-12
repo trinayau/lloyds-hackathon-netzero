@@ -11,10 +11,11 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import Link from '@mui/material/Link';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Account', 'Login'];
 const pageLinks = ['/products', '/pricing', '/blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Profile', 'Account', 'Product', 'Logout'];
 const loggedIn = false;
 
 function NavBar() {
@@ -100,6 +101,14 @@ function NavBar() {
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
+              
+               <MenuItem key={'Products'} 
+              //  onClick={handleCloseUserMenu}
+              component={Link} href="/products"
+               >
+                  <Typography textAlign="center">Products</Typography>
+                </MenuItem>
+        
             </Menu>
           </Box>
          
@@ -131,6 +140,15 @@ function NavBar() {
                 {page}
               </Button>
             ))}
+            <Button
+                key={'products'}
+                href="/products"
+
+                // onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: '#07060A', display: 'block' }}
+              >
+                Products
+              </Button>
           </Box>
 {/* End mobile */}
           <Box sx={{ flexGrow: 0 }}>
