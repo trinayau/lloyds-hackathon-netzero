@@ -37,3 +37,11 @@ footer a{
 footer a:hover{
     color: var(--medium-color);
 }
+
+/* media screen 76px */
+
+@media screen and (max-width: 768px) {
+    .flex-wrapper {
+
+    }
+}

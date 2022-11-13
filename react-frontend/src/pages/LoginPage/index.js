@@ -42,13 +42,15 @@ export default function LoginPage() {
   };
 
   return (
-    <>
+    <div>
       <Banner MyVideo={MyVideo} buttonText={""} />
-      <Container component="main" maxWidth="xs">
+      <div style={{backgroundColor: "#f5f5f5"}}>
+      <Container component="main" maxWidth="xs" >
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: 0,
+            paddingTop: 5,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -114,6 +116,7 @@ export default function LoginPage() {
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
-    </>
+      </div>
+    </div>
   );
 }

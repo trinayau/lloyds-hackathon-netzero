@@ -3,7 +3,7 @@ import './index.css';
 
 const Banner = ({MyVideo, buttonText}) => {
   return (
-    <>
+    <div>
       <div
         style={{
           display: "flex",
@@ -46,7 +46,7 @@ const Banner = ({MyVideo, buttonText}) => {
 }
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
