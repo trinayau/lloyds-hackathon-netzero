@@ -1,7 +1,7 @@
 
 import {Routes, Route} from 'react-router-dom';
 import {default as Layout} from './layouts';
-import { HomePage, LoginPage, AllProductPage, AccountPage, OrderStatusPage, ResultsPage, ShoppingCartPage, SingleProductPage, NotFoundPage } from './pages';
+import { HomePage, LoginPage, AllProductPage, AccountPage, OrderStatusPage, CartPage, SingleProductPage, NotFoundPage } from './pages';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
             <Route path =":productId/:productName" element={<SingleProductPage />} />
           </Route>
 
-          <Route path ="/shoppingcart" element={<ShoppingCartPage />} />
+          <Route path ="/cart" element={<CartPage />} />
           <Route path="*" element={<NotFoundPage/>} />
         </Route>
       </Routes>

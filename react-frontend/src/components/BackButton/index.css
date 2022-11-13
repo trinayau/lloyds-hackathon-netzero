@@ -19,8 +19,11 @@
 
 @media screen and (max-width: 768px) {
     .back {
-        padding: 0;
+        padding: 0px 0px 30px 0px;
         justify-content: center;
+    }
+    .arrow-icon {
+        padding: 0 10px 0 0px;
     }
 }
     
