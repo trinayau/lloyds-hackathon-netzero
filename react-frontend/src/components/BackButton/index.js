@@ -13,7 +13,7 @@ const BackButton = () => {
     <div className="back" onClick={handleClick}>
       <div className="arrow-icon">
           <ArrowBackIosNewIcon />
-      Back to products
+      Back
       </div>
     </div>
   );

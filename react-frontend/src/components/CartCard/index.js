@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 const CartCard = ({cartItem}) => {
     const [quantity, setQuantity] = useState(cartItem.quantity);
-    const [totalPrice, setTotalPrice] = useState(cartItem.price * quantity);
+    const [totalPrice, setTotalPrice] = useState((cartItem.price/cartItem.quantity) * quantity);
     const [totalOffset, setTotalOffset] = useState(cartItem.offset * quantity);
     const [totalCost, setTotalCost] = useState(totalPrice + totalOffset);
     const [isEditing, setIsEditing] = useState(false);
@@ -60,7 +60,7 @@ const CartCard = ({cartItem}) => {
           <div class="cart-item-details">Carbon offset: £{(Math.round(totalOffset * 100) / 100).toFixed(2)}</div>
           <div class="cart-item-details">Price: £{(Math.round(totalPrice * 100) / 100).toFixed(2)}</div>
           <div class="cart-item-details">
-            Quantity: <span onClick={minus}>-</span> <span class="quanity box">{quantity}</span> <span onClick={plus}>+</span>
+             <span className="quantity-changers" onClick={minus}>-</span> <span class="quantity-box">{quantity}</span> <span className="quantity-changers" onClick={plus}>+</span>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 .cart {
     padding: 0px 100px 50px 100px;
+    background-color: var(--bg-color);
 }
 .cart > div:nth-child(even) {
     background-color: white;
@@ -28,13 +29,28 @@
 }
 .cart-item-info {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-column-gap: 30px;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-column-gap: 25px;
 }
-.cart-item-info span {
-    padding: 3px 10px 3px 10px;
+.cart-item-info .quantity-box {
+    padding: 3px px 3px 0px;
     background-color: white;
     border: 1px solid #f3f3f3;
+}
+
+.cart-item-info .quantity-changers {
+    padding: 3px 20px 3px 20px;
+    background-color: white;
+    border: 1px solid #f3f3f3;
+
+}
+
+.cart-page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px 50px 100px;
+    background-color: var(--bg-color);
 }
 
 /* media screen for 768px */
