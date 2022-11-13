@@ -12,11 +12,12 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Link from '@mui/material/Link';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-const pages = ['Account', 'Login'];
+const pages = ['Login', 'Contact'];
 const pageLinks = ['/products', '/pricing', '/blog'];
-const settings = ['Profile', 'Account', 'Product', 'Logout'];
-const loggedIn = false;
+const settings = ['Profile', 'Account', 'Orders', 'Logout'];
+const loggedIn = true;
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -145,11 +146,27 @@ function NavBar() {
                 href="/products"
 
                 // onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: '#07060A', display: 'block' }}
+                sx={{ my: 2, color: '#07060A', display: 'block', "&:hover": {
+                  color: '#52796f',
+                  textDecoration: 'none',
+                  transition: 'all 0.2s ease-in'}}}
               >
                 Products
               </Button>
+              <Button
+                key={'cart'}
+                href="/cart"
+
+                // onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: '#07060A', display: 'block', textAlign: 'center', mx:0, px: 0, "&:hover": {
+                  color: '#52796f',
+                  textDecoration: 'none',
+                  transition: 'all 0.2s ease-in'} }}
+              >
+                <ShoppingCartIcon sx={{color: '#07060A'}}/>
+              </Button>
           </Box>
+          
 {/* End mobile */}
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
