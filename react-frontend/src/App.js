@@ -1,7 +1,7 @@
 
 import {Routes, Route} from 'react-router-dom';
 import {default as Layout} from './layouts';
-import { HomePage, LoginPage, AllProductPage, AccountPage, OrderStatusPage, CartPage, SingleProductPage, NotFoundPage } from './pages';
+import { HomePage, LoginPage, SignUpPage, AllProductPage, AccountPage, OrderStatusPage, CartPage, SingleProductPage, NotFoundPage } from './pages';
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path ="/" element={<HomePage />} />
           <Route path ="/login" element={<LoginPage />} />
+          <Route path ="/signup" element={<SignUpPage />} />
           <Route path ="/products" element={<AllProductPage />} />
           <Route path ="/account" element={<AccountPage />} />
           <Route path ="/orderstatus" element={<OrderStatusPage />} />
