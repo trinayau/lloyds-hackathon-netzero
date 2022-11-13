@@ -32,5 +32,6 @@ Lloyds Banking Group Athena Virtual Hackathon - Journey to Net Zero Entry by @tr
 ## How to run the app in production
 - Open `https://carbonaltdelete.netlify.app/` in your browser
 
-
+## License
+This project is not licensed for personal or commercial use.
  
