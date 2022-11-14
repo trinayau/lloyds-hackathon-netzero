@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 django = "*"
+django-rest-framework = "*"
+django-cors-headers = "*"
+djoser = "*"
+stripe = "*"
 
 [dev-packages]
 
