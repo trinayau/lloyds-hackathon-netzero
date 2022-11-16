@@ -440,7 +440,7 @@ section {
 }
 .profile-offset {
     background-color: #f9f9f9;
-    padding: 0 100px 0 100px;
+    padding: 0 100px 100px 100px;
 }
 .profile-offset-info {
     display: inline-grid;
