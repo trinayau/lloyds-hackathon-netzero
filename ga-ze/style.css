@@ -489,18 +489,17 @@ section {
 .contact {
     background-color: #f9f9f9;
     padding: 100px 100px 100px 100px;
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-column-gap: 50px;
+    grid-column-gap: 50px; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
-}
-input, textarea::placeholder {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--dark-color);
-    opacity: 0.5;
 }
 .contact-info p {
     margin: 15px 0;
+    max-width: 350px;
 }
 .contact-header, .contact-info span {
     font-weight: bold;
@@ -519,6 +518,11 @@ input, textarea::placeholder {
     border: #f5f5f5;
     resize: none;
     padding: 5px 10px;
+}
+input, textarea::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-color);
+    opacity: 0.5;
 }
 .contact-form input[type=submit] {
     width: 100px;
