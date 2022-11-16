@@ -336,10 +336,18 @@ section {
 }
 
 /* accounts section */
-.hello-user {
+.account-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #f9f9f9;
     padding: 90px 100px 30px 100px;
+}
+.hello-user {
     font-size: 32px;
+    font-weight: bold;
+}
+.carbon-rating span {
     font-weight: bold;
 }
 .account-info {
@@ -423,6 +431,39 @@ section {
     padding: 0 0 30px 0;
     font-size: 24px;
     font-weight: bold;
+}
+.carbon-history-chart {
+    padding: 0 0 30px 0;
+}
+.certificate a {
+    font-weight: bold;
+}
+.profile-offset {
+    background-color: #f9f9f9;
+    padding: 0 100px 0 100px;
+}
+.profile-offset-info {
+    display: inline-grid;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 30px;
+}
+.profile-offset-header {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.profile-offset-amount {
+    display: flex;
+    padding-bottom: 20px;
+}
+.profile-offset-amount label {
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 20px;
+}
+.profile-offset-amount input {
+    margin-right: 20px;
 }
 
 /* Footer */
