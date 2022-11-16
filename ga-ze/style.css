@@ -336,10 +336,20 @@ section {
 }
 
 /* accounts section */
+@media only screen and (max-width: 370px) {
+    .profile-offset {
+        max-width: 350px;
+    }
+    .carbon-history-chart {
+        visibility: hidden;
+    }
+}
+
 .account-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     background-color: #f9f9f9;
     padding: 90px 100px 30px 100px;
 }
@@ -359,7 +369,7 @@ section {
     grid-row-gap: 30px;
     align-items: center; */
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
     padding: 0 50px 50px 100px;
 }
@@ -372,7 +382,7 @@ section {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 5px;
     padding: 20px 20px 10px 30px;
-    margin: 20px 0 0 0;
+    margin: 20px 50px 0 0;
 }
 .profile-headers {
     display: grid;
@@ -461,14 +471,17 @@ section {
 .profile-offset-amount {
     display: flex;
     padding-bottom: 20px;
+    flex-wrap: wrap;
 }
 .profile-offset-amount label {
     font-size: 20px;
     font-weight: bold;
     padding-right: 20px;
+    margin-bottom: 10px;
 }
 .profile-offset-amount input {
     margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 /* Footer */
