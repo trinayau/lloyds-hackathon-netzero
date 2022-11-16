@@ -336,12 +336,13 @@ section {
 }
 
 /* accounts section */
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 360px) {
     .profile-offset {
         max-width: 350px;
     }
-    .carbon-history-chart {
+    .carbon-history-chart img {
         visibility: hidden;
+        height: 0;
     }
 }
 
