@@ -60,7 +60,7 @@ export default function SignUpPage() {
             <LockIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Register an Account
+            Register
           </Typography>
           <Box
             component="form"

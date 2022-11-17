@@ -17,7 +17,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 const pages = ['Login', 'Contact'];
 const pageLinks = ['/products', '/pricing', '/blog'];
 const settings = ['Profile', 'Account', 'Orders', 'Logout'];
-const loggedIn = true;
+const loggedIn = false;
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

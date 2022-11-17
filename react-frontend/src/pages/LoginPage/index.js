@@ -107,7 +107,7 @@ export default function LoginPage() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2" sx={{ color: "#84a98c" }}>
+                <Link href="/signup" variant="body2" sx={{ color: "#84a98c" }}>
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

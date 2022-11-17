@@ -22,9 +22,17 @@ console.log(productId, productName);
         </div>
     </div>
     <div className="supplier-list">
-        <Supplier supplier={{name: "First Choice Produce", offset: "0.50", price: "1.99", productid: "1"}}/>
-        <Supplier supplier={{name: "YesChef", offset: "0.70", price: "1.99", productid: "2"}}/>
-        <Supplier supplier={{name: "Allen Reeder", offset: "1.00", price: "2.00", productid: "3"}}/>
+        <div className="supplier-list-heading supplier" style={{fontWeight: 600}}>
+            <div>Supplier</div>
+            <div>RRP</div>
+            <div>Carbon Offset</div>
+            <div>Total Price</div>
+            <div>Amount</div>
+            
+            </div>
+        <Supplier supplier={{name: "First Choice Produce", offset: 0.50, price: 1.99, productid: 1}}/>
+        <Supplier supplier={{name: "YesChef", offset: 0.70, price: 1.99, productid: 2}}/>
+        <Supplier supplier={{name: "Allen Reeder", offset: 1.00, price: 2.00, productid: 3}}/>
     
     </div>
     </span> );
