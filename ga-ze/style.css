@@ -503,6 +503,7 @@ section {
 }
 .contact-header, .contact-info span {
     font-weight: bold;
+    color: var(--medium-color);
 }
 .contact-form {
     max-width: 400px;
@@ -533,6 +534,40 @@ input, textarea::placeholder {
 }
 .contact-form input[type=submit]:active {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+/* SUppliers list */
+@media only screen and (max-width: 360px) {
+    .suppliers-info {
+        font-size: 12px;
+    }
+}
+.suppliers {
+    background-color: #f9f9f9;
+    padding: 50px 100px 100px 100px;
+    display: flex;
+    flex-direction: column;
+}
+.suppliers > div:nth-child(even){
+    background-color: white;
+    border: none;
+}
+.suppliers > div:nth-child(even) a {
+    color: var(--medium-color);
+}
+.suppliers-header, .suppliers-info {
+    line-height: 25px;
+    margin-bottom: 20px;
+    padding: 10px 30px 10px 30px;
+}
+.suppliers-header h2 {
+    color: var(--medium-color);
+}
+.suppliers-info span {
+    font-weight: bold;
+}
+.suppliers-info p {
+    margin-bottom: 5px;
 }
 
 /* Footer */
