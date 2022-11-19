@@ -14,10 +14,10 @@ import MenuItem from '@mui/material/MenuItem';
 import Link from '@mui/material/Link';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-const pages = ['Login', 'Contact'];
+const pages = ['Contact'];
 const pageLinks = ['/products', '/pricing', '/blog'];
-const settings = ['Profile', 'Account', 'Orders', 'Logout'];
-const loggedIn = false;
+const settings = ['Orders', 'Logout'];
+const loggedIn = true;
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -40,7 +40,7 @@ function NavBar() {
 
   return (
     <AppBar position="static" style={{background:'#ffffff', boxShadow:'none', padding: 0, maxWidth: '100% !important'}}>
-      <Container maxWidth="false" sx={{margin: 0, width: '100%', padding: 0,  }}>
+      <Container maxWidth="false">
         <Toolbar disableGutters sx={{ justifyContent: "space-between", padding: 0}}>
           
           <Typography
@@ -168,35 +168,40 @@ function NavBar() {
           </Box>
           
 {/* End mobile */}
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0}}>
             <Tooltip title="Open settings">
               {loggedIn ? (
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Kai Mayfair" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Kai Mayfair" src="/static/images/avatar/2.jpg" sx={{backgroundColor:'#52796f'}}/>
               </IconButton>
               ) : (<></>)}
             </Tooltip>
             <Menu
-              sx={{ mt: '45px' }}
+              sx={{ mt: '45px'}}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
                 vertical: 'top',
-                horizontal: 'right',
+                horizontal: 'right-start',
               }}
               keepMounted
               transformOrigin={{
                 vertical: 'top',
-                horizontal: 'right',
+                horizontal: 'right-start',
               }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
+              disableScrollLock={true}
             >
+              <MenuItem key='profile' onClick={handleCloseUserMenu} component={Link} href='/account'>
+                  <Typography textAlign="center">Profile</Typography>
+                </MenuItem>
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <MenuItem key={setting} onClick={handleCloseUserMenu} component={Link} href='/account'>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
+              
             </Menu>
           </Box>
         </Toolbar>

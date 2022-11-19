@@ -10,12 +10,20 @@
     box-sizing: border-box;
 }
 
-body {
+body{
     margin: auto !important;
-    max-width: 1440px;
+    padding:0 calc((100% - 1440px)/2);
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     color: var(--dark-color);
+}
+
+.nav{
+    margin: auto !important;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-color);
+
 }
 /* flex-wrapper pushes footer to bottom of page content */
 
