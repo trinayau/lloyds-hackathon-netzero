@@ -43,7 +43,7 @@ const AccountPage = () => {
             <div class="carbon-history-chart"><img src={chart} alt="carbon chart" class="img-fluid"/></div>    
             <div class="certificate">
                 <p>You have offset a total of : 1 ton of carbon </p>
-                <p>View your certificate <a href="/">HERE</a> to display at your storefront</p>  
+                <p>View your certificate <a href="/certificate">HERE</a> to display at your storefront</p>  
             </div>
         </div>
     </div>

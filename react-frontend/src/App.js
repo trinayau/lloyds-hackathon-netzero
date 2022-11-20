@@ -2,6 +2,7 @@
 import {Routes, Route} from 'react-router-dom';
 import {default as Layout} from './layouts';
 import { HomePage, LoginPage, SignUpPage, AllProductPage, AccountPage, OrderStatusPage, CartPage, SingleProductPage, NotFoundPage, SupplierPage, RestaurantsPage, ContactPage } from './pages';
+import {Certificate} from './components';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path = "/suppliers" element={<SupplierPage />} />
           <Route path = "/restaurants" element={<RestaurantsPage />} />
           <Route path = "/contact" element={<ContactPage />} />
+          <Route path ="/certificate" element={<Certificate />} />
           
           <Route path ="/products">
             <Route path =":productId/:productName" element={<SingleProductPage />} />
