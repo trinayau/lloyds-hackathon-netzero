@@ -1,0 +1,38 @@
+/* SUppliers list */
+@media only screen and (max-width: 360px) {
+    .suppliers-info {
+        font-size: 12px;
+    }
+}
+.suppliers {
+    background-color: #f9f9f9;
+    padding: 50px 100px 100px 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.suppliers a{
+    text-decoration: none;
+    color: var(--medium-color);
+}
+.suppliers > div:nth-child(even){
+    background-color: white;
+    border: none;
+}
+.suppliers > div:nth-child(even) a {
+    color: var(--medium-color);
+}
+.suppliers-header, .suppliers-info {
+    line-height: 25px;
+    margin-bottom: 20px;
+    padding: 10px 30px 10px 30px;
+}
+.suppliers-header h2 {
+    color: var(--medium-color);
+}
+.suppliers-info span {
+    font-weight: bold;
+}
+.suppliers-info p {
+    margin-bottom: 5px;
+}

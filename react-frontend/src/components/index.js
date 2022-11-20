@@ -6,3 +6,4 @@ export {default as SearchBar} from './SearchBar';
 export {default as BackButton} from './BackButton';
 export {default as Supplier} from './Supplier';
 export {default as CartCard} from './CartCard';
+export {default as SupplierCard} from './SupplierCard';

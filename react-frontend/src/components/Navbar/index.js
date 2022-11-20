@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Link from '@mui/material/Link';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-const pages = ['Contact'];
+// const pages = ['Contact'];
 const pageLinks = ['/products', '/pricing', '/blog'];
 const settings = ['Orders', 'Logout'];
 const loggedIn = true;
@@ -97,17 +97,30 @@ function NavBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
               
                <MenuItem key={'Products'} 
               //  onClick={handleCloseUserMenu}
               component={Link} href="/products"
                >
                   <Typography textAlign="center">Products</Typography>
+                </MenuItem>
+                <MenuItem key={'Suppliers'} 
+              //  onClick={handleCloseUserMenu}
+              component={Link} href="/suppliers"
+               >
+                  <Typography textAlign="center">Suppliers</Typography>
+                </MenuItem>
+                <MenuItem key={'Restaurants'} 
+              //  onClick={handleCloseUserMenu}
+              component={Link} href="/restaurants"
+               >
+                  <Typography textAlign="center">Restaurants</Typography>
+                </MenuItem>
+                <MenuItem key={'contact'} 
+              //  onClick={handleCloseUserMenu}
+              component={Link} href="/contact"
+               >
+                  <Typography textAlign="center">Contact</Typography>
                 </MenuItem>
         
             </Menu>
@@ -132,7 +145,7 @@ function NavBar() {
             CarbonAltDel
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', lg: 'flex', xl: 'flex', flexDirection: "row",    justifyContent: "end" } }}>
-            {pages.map((page) => (
+            {/* {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
@@ -140,7 +153,7 @@ function NavBar() {
               >
                 {page}
               </Button>
-            ))}
+            ))} */}
             <Button
                 key={'products'}
                 href="/products"
@@ -152,6 +165,42 @@ function NavBar() {
                   transition: 'all 0.2s ease-in'}}}
               >
                 Products
+              </Button>
+              <Button
+                key={'suppliers'}
+                href="/suppliers"
+
+                // onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: '#07060A', display: 'block', "&:hover": {
+                  color: '#52796f',
+                  textDecoration: 'none',
+                  transition: 'all 0.2s ease-in'}}}
+              >
+                Suppliers
+              </Button>
+              <Button
+                key={'restaurants'}
+                href="/restaurants"
+
+                // onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: '#07060A', display: 'block', "&:hover": {
+                  color: '#52796f',
+                  textDecoration: 'none',
+                  transition: 'all 0.2s ease-in'}}}
+              >
+                Restaurants
+              </Button>
+              <Button
+                key={'contact'}
+                href="/contact"
+
+                // onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: '#07060A', display: 'block', "&:hover": {
+                  color: '#52796f',
+                  textDecoration: 'none',
+                  transition: 'all 0.2s ease-in'}}}
+              >
+                Contact
               </Button>
               <Button
                 key={'cart'}

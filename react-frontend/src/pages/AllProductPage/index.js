@@ -10,6 +10,7 @@ import Raspberries from "./images/raspberries.svg";
 import Sugar from "./images/sugar.svg";
 
 const AllProductPage = () => {
+  
   return (
     <div className="productsPage">
       <SearchBar Heading="Products" />

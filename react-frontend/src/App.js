@@ -1,7 +1,7 @@
 
 import {Routes, Route} from 'react-router-dom';
 import {default as Layout} from './layouts';
-import { HomePage, LoginPage, SignUpPage, AllProductPage, AccountPage, OrderStatusPage, CartPage, SingleProductPage, NotFoundPage } from './pages';
+import { HomePage, LoginPage, SignUpPage, AllProductPage, AccountPage, OrderStatusPage, CartPage, SingleProductPage, NotFoundPage, SupplierPage, RestaurantsPage, ContactPage } from './pages';
 
 function App() {
   return (
@@ -14,6 +14,9 @@ function App() {
           <Route path ="/products" element={<AllProductPage />} />
           <Route path ="/account" element={<AccountPage />} />
           <Route path ="/orderstatus" element={<OrderStatusPage />} />
+          <Route path = "/suppliers" element={<SupplierPage />} />
+          <Route path = "/restaurants" element={<RestaurantsPage />} />
+          <Route path = "/contact" element={<ContactPage />} />
           
           <Route path ="/products">
             <Route path =":productId/:productName" element={<SingleProductPage />} />
