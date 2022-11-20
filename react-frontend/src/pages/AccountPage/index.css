@@ -9,6 +9,11 @@
     }
 }
 
+.account a{
+    color: var(--medium-color);
+    text-decoration: none;
+}
+
 .account-header {
     display: flex;
     justify-content: space-between;
