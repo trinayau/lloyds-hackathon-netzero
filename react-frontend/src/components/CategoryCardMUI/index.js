@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -6,28 +7,28 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 
-const ProductCardMUI = ({name, id, image, price, offset, dispatch, product}) => {
+const CategoryCardMUI = ({catName, catId, catImage, catPrice, catOffset, cheapest, dispatch}) => {
 
     return (
       <Card sx={{ minWidth: '300px', maxWidth: 300 }}>
         <CardMedia
           component="img"
-          alt={name}
+          alt={catName}
           height="140"
-          image={image}
+          image={catImage}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {name}
+            {catName}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          Price: £{price}
+          Price from: £{catPrice}
           <br />
-          Offset price: £{offset}
+          Offset carbon from": £{catOffset}
           </Typography>
         </CardContent>
         <CardActions>
-        <a className="compare-link"href={`/products/${id}/${name}`}>Compare</a>
+        <a className="compare-link"href={`/products/${catId}/${catName}`}>Compare</a>
           {/* <div className="add-button" onClick={(e) => e.preventDefault}>
             ADD
           </div> */}
@@ -48,7 +49,7 @@ const ProductCardMUI = ({name, id, image, price, offset, dispatch, product}) => 
             onClick={() => {
               dispatch({
                 type: "ADD_TO_CART",
-                payload: { product },
+                payload: { cheapest },
               });
             }}
           >
@@ -59,4 +60,4 @@ const ProductCardMUI = ({name, id, image, price, offset, dispatch, product}) => 
     );
   }
 
-export default ProductCardMUI;
+export default CategoryCardMUI;

@@ -1,8 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState} from 'react';
+
 import "./index.css";
-import { SearchBar, ProductCardMUI } from "../../components";
+import { SearchBar, ProductCardMUI, CategoryCardMUI } from "../../components";
 import { CircularProgress } from '@mui/material';
 import axios from 'axios';
+
+import { CartContext } from '../../context/Context';
+import { useContext } from 'react';
+
 
 
 const AllProductPage = () => {
@@ -11,11 +16,15 @@ const AllProductPage = () => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const Globalstate = useContext(CartContext);
+  const dispatch = Globalstate.info.dispatch;
+  console.log(Globalstate);
+
   useEffect(() =>{ 
     async function searchApi() {
       const requestLatest = "https://lloyds-hackathon-server.vercel.app/api/v1/latest-products/";
       const requestCategories = "https://lloyds-hackathon-server.vercel.app/api/v1/categories/";
-    
+
         try{
             const resultLatest = await axios.get(requestLatest,
             {
@@ -42,7 +51,10 @@ const AllProductPage = () => {
     }
     searchApi();
     }, [])
+
   
+    
+
   return (
     <div className="productsPage">
 
@@ -61,6 +73,9 @@ const AllProductPage = () => {
               image={product.image}
               offset={product.offset}
               id={product.id}
+              dispatch={dispatch}
+              product={product}
+   
             />
           );
         }) : <CircularProgress sx={{color: '#52796f', textAlign:'center'}}/>}
@@ -72,14 +87,15 @@ const AllProductPage = () => {
 
         {loading ? categories.map((category) => {
           return (
-            <ProductCardMUI
+            <CategoryCardMUI
               key={category.id}
-              name={category.name}
-              price={category.minimum_product_price}
-              image={category.image_url}
-              offset={category.minimum_offset_price}
-              id={category.id}
-              isCategory={true}
+              catName={category.name}
+              catPrice={category.minimum_product_price}
+              catImage={category.image_url}
+              catOffset={category.minimum_offset_price}
+              catId={category.id}
+              dispatch={dispatch}
+              cheapest={category.cheapest_product}
 
             />
           );

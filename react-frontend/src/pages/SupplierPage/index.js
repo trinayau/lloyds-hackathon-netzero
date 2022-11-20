@@ -5,7 +5,7 @@ const SupplierPage = () => {
     <div class="suppliers">
         <div class="suppliers-header">
             <h2>Here is a list of our local sustainable suppliers:</h2>
-            <p>(Please check back regularly as we are constanly working on increasing the number of local suppliers to provide you with the most eco friendly and sustainable produce)</p>
+            <p>Please <a href="/contact">get in touch</a> if you are a supplier who wants to connect with sustainable restaurants.</p>
         </div>
         <SupplierCard name={"Nettlebred Creamery"} desc="Nettlebed Creamery makes three multi-award winning organi cheeses as well as organic milk, kefir, cream and ice cream" website="https://www.nettlebedcreamery.com/"/>
         <SupplierCard name={"Organic North"} desc="We're a members run co-operative, the largest and longest-established wholesalers of certified organic produce in the north and from our base on New Smithfield’s Market in Manchester, we’re on a mission to help mend our broken, wasteful and polluting food system<" website="https://www.organicnorth.co.uk/"/>
