@@ -52,6 +52,13 @@
     color: var(--medium-color)
 }
 
+.no-products{
+    text-align: center;
+    padding: 50px 0 50px 0;
+    font-size: 20px;
+    color: var(--light-color);
+}
+
 /* media screen for 768px */
 @media screen and (max-width: 768px) {
     .single-product-section {
@@ -65,4 +72,14 @@
     .supplier-list {
         padding: 0;
     }
+
+    .single-product-name{
+        text-align: center;
+    }
+
+    .desc{
+        text-align: center;
+        padding: 0 10px 0 10px;
+    }
 }
+
