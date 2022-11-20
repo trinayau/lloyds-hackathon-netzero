@@ -2,7 +2,7 @@ import chart from './images/Chart.svg'
 import './index.css';
 const AccountPage = () => {
     return (
-        <div>
+        <div class="account">
     <div class="account-header">
         <div class="hello-user">Hello, Kei</div>
         <div class="carbon-rating">Your carbon ranking: <span>#3 this week</span></div>
@@ -11,7 +11,7 @@ const AccountPage = () => {
     <div class="account-info">
         <div class="profile">
             <div class="profile-headers">
-                <div class="company-namne">Company Name</div>
+                <div class="company-name">Company Name</div>
                 <div class="company-email">Email</div>
                 {/* <div class="affiliates">Affiliate</div> */}
             </div>
