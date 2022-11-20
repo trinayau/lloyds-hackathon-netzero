@@ -36,3 +36,13 @@
 .suppliers-info p {
     margin-bottom: 5px;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .restaurants{
+        padding: 0;
+    }
+    .suppliers-info {
+        font-size: 12px;
+    }
+}

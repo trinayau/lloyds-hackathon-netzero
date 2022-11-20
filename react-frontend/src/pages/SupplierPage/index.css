@@ -1,11 +1,8 @@
 /* SUppliers list */
-@media only screen and (max-width: 360px) {
-    .suppliers-info {
-        font-size: 12px;
-    }
-}
+
 .suppliers {
     background-color: #f9f9f9;
+    padding: 50px 100px 100px 100px;
     display: flex;
     flex-direction: column;
 }
@@ -34,4 +31,14 @@
 }
 .suppliers-info p {
     margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .suppliers{
+        padding: 0;
+    }
+    .suppliers-info {
+        font-size: 12px;
+    }
 }
