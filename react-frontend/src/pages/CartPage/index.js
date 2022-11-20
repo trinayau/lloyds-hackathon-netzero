@@ -34,8 +34,7 @@ const CartPage = () => {
       </div>
       <div class="cart-page-footer">
         <div class="cart-page-footer-total">
-          <div class="cart-page-footer-total-text">Total</div>
-          {state.length > 0 && <div className="total"><p>£{total}</p></div>}
+          {state.length > 0 && <div className="total"><p>Total: £{total}</p></div>}
         </div>
         <div class="cart-page-footer-checkout">
         <Button variant="contained" onClick={() => handleLink('/orderstatus')} sx={{backgroundColor:'#354F52', my:'5px'}}>Checkout</Button>

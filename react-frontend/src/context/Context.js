@@ -13,6 +13,8 @@ export const CartProvider = (props) => {
         } else {
           return [...state, action.payload];
         }
+
+
       case "INCREASE":
         const tempstate1 = state.map((item) => {
           if (item.product.id === action.payload.id) {

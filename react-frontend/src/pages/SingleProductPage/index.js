@@ -34,7 +34,7 @@ const SingleProductPage = ({ image, productDesc }) => {
     if (category.products.length > 0) {
         
       return(category.products.map((product, index) => {
-        return <Supplier key={product.id} supplier={product} lowestOffset={category.minimum_offset_price} />;
+        return <Supplier key={product.id} product={product} lowestOffset={category.minimum_offset_price} />;
       }))
     } else {
         document.querySelector(".supplier-list-heading").style.display = "none";
@@ -47,7 +47,6 @@ const SingleProductPage = ({ image, productDesc }) => {
       <SearchBar Heading="Products" />
       <BackButton />
       <div className="single-product-section">
-        {loading ? console.log(category) : <CircularProgress />}
         {loading ? (
           <div className="single-product-img">
             <img
