@@ -13,7 +13,7 @@ const ProductCardMUI = ({name, id, image, price, offset, dispatch, product}) => 
         <CardMedia
           component="img"
           alt={name}
-          height="140"
+          height="150"
           image={image}
         />
         <CardContent>
@@ -27,7 +27,7 @@ const ProductCardMUI = ({name, id, image, price, offset, dispatch, product}) => 
           </Typography>
         </CardContent>
         <CardActions>
-        <a className="compare-link"href={`/products/${id}/${name}`}>Compare</a>
+        <a className="compare-link"href={`/products/${id}/${name}`} style={{marginLeft: '10px'}}>Compare</a>
           {/* <div className="add-button" onClick={(e) => e.preventDefault}>
             ADD
           </div> */}
@@ -35,7 +35,7 @@ const ProductCardMUI = ({name, id, image, price, offset, dispatch, product}) => 
             variant="contained"
             // href="/cart"
             sx={{
-              my: "5px",
+              mx: "30px",
               backgroundColor: "#84a98c",
               "&:hover": {
                 backgroundColor: "#52796f",

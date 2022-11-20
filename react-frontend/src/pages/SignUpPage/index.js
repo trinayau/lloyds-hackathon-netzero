@@ -12,6 +12,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import MyVideo from "../HomePage/openingvid.mp4";
 import { Banner } from "../../components";
+import { useNavigate } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -22,7 +23,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit">
         CarbonAltDel
       </Link>{" "}
       {new Date().getFullYear()}
@@ -32,6 +33,10 @@ function Copyright(props) {
 }
 
 export default function SignUpPage() {
+  const navigate = useNavigate();
+  const handleLink = (link) => {
+    navigate(link);
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -107,7 +112,7 @@ export default function SignUpPage() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="/login" variant="body2" sx={{ color: "#84a98c" }}>
+                <Link onClick={() => handleLink('/login')} variant="body2" sx={{ color: "#84a98c" }}>
                   {"Have an account already? Sign in"}
                 </Link>
               </Grid>

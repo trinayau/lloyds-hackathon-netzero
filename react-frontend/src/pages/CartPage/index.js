@@ -1,7 +1,15 @@
 import { SearchBar, BackButton, CartCard } from "../../components";
 import Button from '@mui/material/Button';
+import { useContext } from "react";
+import { CartContext } from "../../context/Context";
 import "./index.css";
 const CartPage = () => {
+
+  const Globalstate = useContext(CartContext);
+  const state = Globalstate.info.state;
+  const dispatch = Globalstate.info.dispatch;
+  console.log(Globalstate);
+
   const cartItems = [
     {
       id: 1,
@@ -52,7 +60,10 @@ const CartPage = () => {
       <SearchBar Heading="Your Shopping Cart" />
       <BackButton />
       <div class="cart">
-        {cartItems.map((cartItem) => (
+        {/* {cartItems.map((cartItem) => (
+          <CartCard cartItem={cartItem} />
+        ))} */}
+        {state.map((cartItem) => (
           <CartCard cartItem={cartItem} />
         ))}
       </div>

@@ -14,7 +14,7 @@ const CategoryCardMUI = ({catName, catId, catImage, catPrice, catOffset, cheapes
         <CardMedia
           component="img"
           alt={catName}
-          height="140"
+          height="150"
           image={catImage}
         />
         <CardContent>
@@ -24,19 +24,20 @@ const CategoryCardMUI = ({catName, catId, catImage, catPrice, catOffset, cheapes
           <Typography variant="body2" color="text.secondary">
           Price from: £{catPrice}
           <br />
-          Offset carbon from": £{catOffset}
+          Offset carbon from: £{catOffset}
           </Typography>
         </CardContent>
         <CardActions>
-        <a className="compare-link"href={`/products/${catId}/${catName}`}>Compare</a>
+        <a className="compare-link" href={`/products/${catId}/${catName}`} style={{marginLeft: '10px'}}>Compare</a>
           {/* <div className="add-button" onClick={(e) => e.preventDefault}>
             ADD
           </div> */}
           <Button
             variant="contained"
             // href="/cart"
+            style={{marginRight: '10px'}}
             sx={{
-              my: "5px",
+              mx: "30px",
               backgroundColor: "#84a98c",
               "&:hover": {
                 backgroundColor: "#52796f",

@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -19,9 +21,11 @@ const pageLinks = ['/products', '/pricing', '/blog'];
 const settings = ['Orders', 'Logout'];
 const loggedIn = true;
 
+
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -38,6 +42,12 @@ function NavBar() {
     setAnchorElUser(null);
   };
 
+  const handleLink = (link) => {
+    handleCloseNavMenu();
+    handleCloseUserMenu();
+    navigate(link);
+  };
+
   return (
     <AppBar position="static" style={{background:'#ffffff', boxShadow:'none', padding: 0, maxWidth: '100% !important'}}>
       <Container maxWidth="false">
@@ -47,7 +57,7 @@ function NavBar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            onClick={() => handleLink('/')}
             sx={{
               display: { xs: 'none', md: 'flex', lg: 'flex', xl: 'flex', flexDirection: 'row', alignItems: 'start', justifyContent: 'start' },
               fontFamily: 'Montserrat',
@@ -99,26 +109,25 @@ function NavBar() {
             >
               
                <MenuItem key={'Products'} 
-              //  onClick={handleCloseUserMenu}
-              component={Link} href="/products"
+              onClick={() => handleLink('/products')}
                >
                   <Typography textAlign="center">Products</Typography>
                 </MenuItem>
                 <MenuItem key={'Suppliers'} 
-              //  onClick={handleCloseUserMenu}
-              component={Link} href="/suppliers"
+              onClick={() => handleLink('/suppliers')}
+              
                >
                   <Typography textAlign="center">Suppliers</Typography>
                 </MenuItem>
                 <MenuItem key={'Restaurants'} 
-              //  onClick={handleCloseUserMenu}
-              component={Link} href="/restaurants"
+               onClick={() => handleLink('/restaurants')}
+             
                >
                   <Typography textAlign="center">Restaurants</Typography>
                 </MenuItem>
                 <MenuItem key={'contact'} 
-              //  onClick={handleCloseUserMenu}
-              component={Link} href="/contact"
+               onClick={() => handleLink('/contact')}
+              
                >
                   <Typography textAlign="center">Contact</Typography>
                 </MenuItem>
@@ -130,7 +139,7 @@ function NavBar() {
             variant="h5"
             noWrap
             component="a"
-            href="/"
+            onClick={() => handleLink('/')}
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none', flexDirection: 'row', alignItems: 'start', justifyContent: 'start'},
@@ -156,9 +165,7 @@ function NavBar() {
             ))} */}
             <Button
                 key={'products'}
-                href="/products"
-
-                // onClick={handleCloseNavMenu}
+                onClick={() => handleLink('/products')}
                 sx={{ my: 2, color: '#07060A', display: 'block', "&:hover": {
                   color: '#52796f',
                   textDecoration: 'none',
@@ -168,9 +175,7 @@ function NavBar() {
               </Button>
               <Button
                 key={'suppliers'}
-                href="/suppliers"
-
-                // onClick={handleCloseNavMenu}
+                onClick={() => handleLink('/suppliers')}
                 sx={{ my: 2, color: '#07060A', display: 'block', "&:hover": {
                   color: '#52796f',
                   textDecoration: 'none',
@@ -180,9 +185,7 @@ function NavBar() {
               </Button>
               <Button
                 key={'restaurants'}
-                href="/restaurants"
-
-                // onClick={handleCloseNavMenu}
+                onClick={() => handleLink('/restaurants')}
                 sx={{ my: 2, color: '#07060A', display: 'block', "&:hover": {
                   color: '#52796f',
                   textDecoration: 'none',
@@ -192,9 +195,7 @@ function NavBar() {
               </Button>
               <Button
                 key={'contact'}
-                href="/contact"
-
-                // onClick={handleCloseNavMenu}
+                onClick={() => handleLink('/contact')}
                 sx={{ my: 2, color: '#07060A', display: 'block', "&:hover": {
                   color: '#52796f',
                   textDecoration: 'none',
@@ -204,9 +205,7 @@ function NavBar() {
               </Button>
               <Button
                 key={'cart'}
-                href="/cart"
-
-                // onClick={handleCloseNavMenu}
+                onClick={() => handleLink('/cart')}
                 sx={{ my: 2, color: '#07060A', display: 'block', textAlign: 'center', mx:0, px: 0, "&:hover": {
                   color: '#52796f',
                   textDecoration: 'none',
@@ -242,11 +241,11 @@ function NavBar() {
               onClose={handleCloseUserMenu}
               disableScrollLock={true}
             >
-              <MenuItem key='profile' onClick={handleCloseUserMenu} component={Link} href='/account'>
+              <MenuItem key='profile' onClick={() => handleLink('/account')}>
                   <Typography textAlign="center">Profile</Typography>
                 </MenuItem>
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu} component={Link} href='/account'>
+                <MenuItem key={setting} onClick={() => handleLink('/account')}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
