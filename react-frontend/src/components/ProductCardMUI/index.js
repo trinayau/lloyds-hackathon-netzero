@@ -48,7 +48,7 @@ const ProductCardMUI = ({name, id, image, price, offset, dispatch, product}) => 
             onClick={() => {
               dispatch({
                 type: "ADD_TO_CART",
-                payload: { product },
+                payload: { product, quantity: 1 },
               });
             }}
           >

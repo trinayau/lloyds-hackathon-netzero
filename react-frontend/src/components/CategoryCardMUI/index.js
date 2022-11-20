@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 
-const CategoryCardMUI = ({catName, catId, catImage, catPrice, catOffset, cheapest, dispatch}) => {
+const CategoryCardMUI = ({catName, catId, catImage, catPrice, catOffset, product, dispatch}) => {
 
     return (
       <Card sx={{ minWidth: '300px', maxWidth: 300 }}>
@@ -50,7 +50,7 @@ const CategoryCardMUI = ({catName, catId, catImage, catPrice, catOffset, cheapes
             onClick={() => {
               dispatch({
                 type: "ADD_TO_CART",
-                payload: { cheapest },
+                payload: { product, quantity: 1 },
               });
             }}
           >

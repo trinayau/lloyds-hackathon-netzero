@@ -95,7 +95,7 @@ const AllProductPage = () => {
               catOffset={category.minimum_offset_price}
               catId={category.id}
               dispatch={dispatch}
-              cheapest={category.cheapest_product}
+              product={category.cheapest_product}
 
             />
           );
