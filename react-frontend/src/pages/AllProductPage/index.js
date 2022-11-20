@@ -1,5 +1,5 @@
 import "./index.css";
-import { ProductCard, SearchBar } from "../../components";
+import { ProductCard, SearchBar, ProductCardMUI } from "../../components";
 import Butter from "./images/butter.svg";
 import Chocolate from "./images/chocolate.svg";
 import Flour from "./images/flour.svg";
@@ -15,18 +15,32 @@ import { useEffect, useState } from 'react';
 const AllProductPage = () => {
 
   const [latestProducts, setLatestProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() =>{ 
     async function searchApi() {
+      const requestLatest = "https://lloyds-hackathon-server.vercel.app/api/v1/latest-products/";
+      const requestCategories = "https://lloyds-hackathon-server.vercel.app/api/v1/categories/";
+    
         try{
-            const result = await axios.get(`https://lloyds-hackathon-server.vercel.app/api/v1/latest-products/`,
+            const resultLatest = await axios.get(requestLatest,
+            {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+            }
+         
+        });
+            const resultCategories = await axios.get(requestCategories,
             {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
             }
         });
-            setLatestProducts(result.data);
+
+            setLatestProducts(resultLatest.data);
+            setCategories(resultCategories.data); 
         }catch(err){
             console.error(err)
         }
@@ -44,26 +58,40 @@ const AllProductPage = () => {
       <section className="latest-products">
         {latestProducts!== [] && latestProducts.map((product) => {
           return (
-            <ProductCard
+            <ProductCardMUI
               key={product.id}
-              image={Butter}
-              id={product.id}
               name={product.name}
               price={product.price}
+              image={product.image}
               offset={product.offset}
-              supplier={product.supplier}
-              supplierImage={product.supplierImage}
+              id={product.id}
+
             />
           );
         })}
-
-
 
       </section>
       <SearchBar Heading="Products" />
 
       <section>
-        <ProductCard
+
+        {categories!== [] && categories.map((category) => {
+          return (
+            <ProductCardMUI
+              key={category.id}
+              name={category.name}
+              price={category.minimum_product_price}
+              image={category.image_url}
+              offset={category.minimum_offset_price}
+              id={category.id}
+              isCategory={true}
+
+            />
+          );
+        })}
+
+      
+        {/* <ProductCard
           image={Sugar}
           name="Castor Sugar"
           price="1.00"
@@ -118,7 +146,7 @@ const AllProductPage = () => {
           price="8.00"
           offset="0.80"
           id="8"
-        />
+        /> */}
       </section>
     </div>
   );

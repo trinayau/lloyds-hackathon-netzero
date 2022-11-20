@@ -6,7 +6,7 @@ const ProductCard = ({ image, name, price, offset, id }) => {
     <>
       <div className="product-box">
         <div className="product-img">
-          <img src={image} alt="sugar" />
+          <img src={image} alt={name}/>
         </div>
         <div className="product-info">
           <h4>{name}</h4>

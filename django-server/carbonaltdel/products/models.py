@@ -8,7 +8,7 @@ class Category(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField()
     description = models.TextField(blank=True, null=True)
-    image = models.ImageField(upload_to='uploads/', blank=True, null=True)
+    image_url = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
         ordering = ('name',)
@@ -19,29 +19,29 @@ class Category(models.Model):
     def get_absolute_url(self):
         return f'/{self.slug}'
     
-    def get_image(self):
-        if self.image:
-            return 'http://127.0.0.1:8000' + self.image.url
-    def get_thumbnail(self):
-        if self.thumbnail:
-            return 'http://127.0.0.1:8000' + self.thumbnail.url
-        else:
-            if self.image:
-                self.thumbnail = self.make_thumbnail(self.image)
-                self.save()
-                return 'http://127.0.0.1:8000' + self.thumbnail.url
-            else:
-                return ''
+    # def get_image(self):
+    #     if self.image:
+    #         return 'http://127.0.0.1:8000' + self.image.url
+    # def get_thumbnail(self):
+    #     if self.thumbnail:
+    #         return 'http://127.0.0.1:8000' + self.thumbnail.url
+    #     else:
+    #         if self.image:
+    #             self.thumbnail = self.make_thumbnail(self.image)
+    #             self.save()
+    #             return 'http://127.0.0.1:8000' + self.thumbnail.url
+    #         else:
+    #             return ''
     
-    def make_thumbnail(self, image, size=(300, 300)):
-        img = Image.open(image)
-        img.convert('RGB')
-        img.thumbnail(size)
+    # def make_thumbnail(self, image, size=(300, 300)):
+    #     img = Image.open(image)
+    #     img.convert('RGB')
+    #     img.thumbnail(size)
 
-        thumb_io = BytesIO()
-        img.save(thumb_io, 'JPEG', quality=85)
+    #     thumb_io = BytesIO()
+    #     img.save(thumb_io, 'JPEG', quality=85)
 
-        thumbnail = File(thumb_io, name=image.name)
+    #     thumbnail = File(thumb_io, name=image.name)
 
         return thumbnail
 class Product(models.Model):
@@ -52,6 +52,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     weight = models.IntegerField(("Weight (kg)"), blank=True, null=True)
     offset = models.DecimalField(max_digits=6, decimal_places=2)
+    image_url = models.CharField(max_length=255, blank=True, null=True)
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -63,6 +64,33 @@ class Product(models.Model):
     def get_absolute_url(self):
         return f'/{self.category.slug}/{self.slug}/'
     
+    # def get_image(self):
+    #     if self.image:
+    #         return 'http://127.0.0.1:8000' + self.image.url
+    #     return ''
+    
+    # def get_thumbnail(self):
+    #     if self.thumbnail:
+    #         return 'http://127.0.0.1:8000' + self.thumbnail.url
+    #     else:
+    #         if self.image:
+    #             self.thumbnail = self.make_thumbnail(self.image)
+    #             self.save()
 
+    #             return 'http://127.0.0.1:8000' + self.thumbnail.url
+    #         else:
+    #             return ''
+    
+    # def make_thumbnail(self, image, size=(300, 200)):
+    #     img = Image.open(image)
+    #     img.convert('RGB')
+    #     img.thumbnail(size)
+
+    #     thumb_io = BytesIO()
+    #     img.save(thumb_io, 'JPEG', quality=85)
+
+    #     thumbnail = File(thumb_io, name=image.name)
+
+    #     return thumbnail
 
 
