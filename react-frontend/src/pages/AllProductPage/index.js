@@ -1,21 +1,15 @@
-import "./index.css";
-import { ProductCard, SearchBar, ProductCardMUI } from "../../components";
-import Butter from "./images/butter.svg";
-import Chocolate from "./images/chocolate.svg";
-import Flour from "./images/flour.svg";
-import Honey from "./images/honey.svg";
-import Orange from "./images/orange.svg";
-import Eggs from "./images/eggs.svg";
-import Raspberries from "./images/raspberries.svg";
-import Sugar from "./images/sugar.svg";
-
-import axios from 'axios';
 import { useEffect, useState } from 'react';
+import "./index.css";
+import { SearchBar, ProductCardMUI } from "../../components";
+import { CircularProgress } from '@mui/material';
+import axios from 'axios';
+
 
 const AllProductPage = () => {
 
   const [latestProducts, setLatestProducts] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() =>{ 
     async function searchApi() {
@@ -41,6 +35,7 @@ const AllProductPage = () => {
 
             setLatestProducts(resultLatest.data);
             setCategories(resultCategories.data); 
+            setLoading(true);
         }catch(err){
             console.error(err)
         }
@@ -55,8 +50,9 @@ const AllProductPage = () => {
       <section className="search-bar">
           <p className="product-heading">Latest Products</p>
       </section>
+
       <section className="latest-products">
-        {latestProducts!== [] && latestProducts.map((product) => {
+        {loading ? latestProducts.map((product) => {
           return (
             <ProductCardMUI
               key={product.id}
@@ -65,17 +61,16 @@ const AllProductPage = () => {
               image={product.image}
               offset={product.offset}
               id={product.id}
-
             />
           );
-        })}
+        }) : <CircularProgress sx={{color: '#52796f', textAlign:'center'}}/>}
 
       </section>
       <SearchBar Heading="Products" />
 
       <section>
 
-        {categories!== [] && categories.map((category) => {
+        {loading ? categories.map((category) => {
           return (
             <ProductCardMUI
               key={category.id}
@@ -88,7 +83,7 @@ const AllProductPage = () => {
 
             />
           );
-        })}
+        }) : <CircularProgress sx={{color: '#52796f'}}/>}
 
       
         {/* <ProductCard
