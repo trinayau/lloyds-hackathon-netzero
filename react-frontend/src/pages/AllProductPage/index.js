@@ -9,67 +9,114 @@ import Eggs from "./images/eggs.svg";
 import Raspberries from "./images/raspberries.svg";
 import Sugar from "./images/sugar.svg";
 
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+
 const AllProductPage = () => {
+
+  const [latestProducts, setLatestProducts] = useState([]);
+
+  useEffect(() =>{ 
+    async function searchApi() {
+        try{
+            const result = await axios.get(`https://lloyds-hackathon-server.vercel.app/api/v1/latest-products/`,
+            {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+            }
+        });
+            setLatestProducts(result.data);
+        }catch(err){
+            console.error(err)
+        }
+    }
+    searchApi();
+    }, [])
   
   return (
     <div className="productsPage">
+
+      {/* latest products */}
+      <section className="search-bar">
+          <p className="product-heading">Latest Products</p>
+      </section>
+      <section className="latest-products">
+        {latestProducts!== [] && latestProducts.map((product) => {
+          return (
+            <ProductCard
+              key={product.id}
+              image={Butter}
+              id={product.id}
+              name={product.name}
+              price={product.price}
+              offset={product.offset}
+              supplier={product.supplier}
+              supplierImage={product.supplierImage}
+            />
+          );
+        })}
+
+
+
+      </section>
       <SearchBar Heading="Products" />
 
       <section>
         <ProductCard
-          Image={Sugar}
-          Name="Castor Sugar"
-          MinPrice="1.00"
-          MinOffset="0.10"
+          image={Sugar}
+          name="Castor Sugar"
+          price="1.00"
+          offset="0.10"
           id="1"
         />
         <ProductCard
-          Image={Raspberries}
-          Name="Raspberries"
-          MinPrice="2.00"
-          MinOffset="0.20"
+          image={Raspberries}
+          name="Raspberries"
+          price="2.00"
+          offset="0.20"
           id="2"
         />
         <ProductCard
-          Image={Flour}
-          Name="Flour"
-          MinPrice="3.00"
-          MinOffset="0.30"
+          image={Flour}
+          name="Flour"
+          price="3.00"
+          offset="0.30"
           id="3"
         />
         <ProductCard
-          Image={Chocolate}
-          Name="Chocolate"
-          MinPrice="4.00"
-          MinOffset="0.40"
+          image={Chocolate}
+          name="Chocolate"
+          price="4.00"
+          offset="0.40"
           id="4"
         />
         <ProductCard
-          Image={Butter}
-          Name="Butter"
-          MinPrice="5.00"
-          MinOffset="0.50"
+          image={Butter}
+          name="Butter"
+          price="5.00"
+          offset="0.50"
           id="5"
         />
         <ProductCard
-          Image={Orange}
-          Name="Orange"
-          MinPrice="6.00"
-          MinOffset="0.60"
+          image={Orange}
+          name="Orange"
+          price="6.00"
+          offset="0.60"
           id="6"
         />
         <ProductCard
-          Image={Honey}
-          Name="Honey"
-          MinPrice="7.00"
-          MinOffset="0.70"
+          image={Honey}
+          name="Honey"
+          price="7.00"
+          offset="0.70"
           id="7"
         />
         <ProductCard
-          Image={Eggs}
-          Name="Eggs"
-          MinPrice="8.00"
-          MinOffset="0.80"
+          image={Eggs}
+          name="Eggs"
+          price="8.00"
+          offset="0.80"
           id="8"
         />
       </section>
