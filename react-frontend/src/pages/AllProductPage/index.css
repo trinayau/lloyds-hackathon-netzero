@@ -28,4 +28,13 @@ section {
     section{
         padding: 0;
     }
+
+    .search-bar{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .product-heading{
+        margin-bottom: 5px;
+    }
 }
