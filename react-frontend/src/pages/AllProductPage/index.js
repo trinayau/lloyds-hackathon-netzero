@@ -18,7 +18,6 @@ const AllProductPage = () => {
 
   const Globalstate = useContext(CartContext);
   const dispatch = Globalstate.info.dispatch;
-  console.log(Globalstate);
 
   useEffect(() =>{ 
     async function searchApi() {

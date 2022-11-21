@@ -41,7 +41,7 @@ const CartPage = () => {
       {state.length > 0 && <div class="cart-page-footer">
         <div class="cart-page-footer-total">
            <div className="total"><p>Total: £{total}</p></div>
-            <div className="total"><p>Total Emissions: {totalEmissions}kg</p></div>
+            <div className="total"><p>Total Emissions Offset: {totalEmissions}kg</p></div>
         </div>
         <div class="cart-page-footer-checkout">
         <Button variant="contained" onClick={() => handleLink('/orderstatus')} sx={{backgroundColor:'#354F52', my:'5px'}}>Checkout</Button>

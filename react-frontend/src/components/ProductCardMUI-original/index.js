@@ -4,50 +4,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Snackbar } from '@mui/material';
-import { Alert } from '@mui/material';
-import {useState} from 'react';
 
-const ProductCardMUI = ({name, id, image, price, offset, dispatch, product}) => {
 
-  const [state, setState] = useState({
-    open: false,
-    vertical: 'top',
-    horizontal: 'center',
-  });
-
-  const { vertical, horizontal, open } = state;
-
-  const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-
-    setState({  vertical: 'top',
-    horizontal: 'center', open: false });
-  };
-
-  const addToCart = () => {
-    dispatch({ type: "ADD_TO_CART", payload: { product, quantity:1 } });
-    setState({  vertical: 'top',
-    horizontal: 'center', open: true });
-    console.log('added to cart')
-  };
+const ProductCardMUIo = ({name, id, image, price, offset, dispatch, product}) => {
 
     return (
       <Card sx={{ minWidth: '300px', maxWidth: 300 }}>
-        <Snackbar open={open} autoHideDuration={2000} onClose={handleClose} anchorOrigin={{
-      vertical: "top",
-      horizontal: "center"
-   }}>
-          <Alert
-            onClose={handleClose}
-            severity="success"
-            sx={{ width: "100%" }}
-          >
-           Added to cart!
-          </Alert>
-        </Snackbar>
         <CardMedia
           component="img"
           alt={name}
@@ -84,11 +46,10 @@ const ProductCardMUI = ({name, id, image, price, offset, dispatch, product}) => 
               },
             }}
             onClick={() => {
-              // dispatch({
-              //   type: "ADD_TO_CART",
-              //   payload: { product, quantity: 1 },
-              // });
-              addToCart();
+              dispatch({
+                type: "ADD_TO_CART",
+                payload: { product, quantity: 1 },
+              });
             }}
           >
             Add to Cart
@@ -98,4 +59,4 @@ const ProductCardMUI = ({name, id, image, price, offset, dispatch, product}) => 
     );
   }
 
-export default ProductCardMUI;
+export default ProductCardMUIo;
