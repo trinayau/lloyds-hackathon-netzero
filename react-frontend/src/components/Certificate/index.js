@@ -10,24 +10,7 @@ const Certificate = () => {
     const date = today.getDate()+'-'+today.getMonth()+'-'+today.getFullYear();
     
     return ( <>
-    <div style={{textAlign: 'center', marginBottom: '5px'}} >
-        <ReactToPrint
-        trigger={() => <Button variant="contained" sx={{
-            backgroundColor: "#354F52",
-            my: "5px",
-            "&:hover": {
-              backgroundColor: "#52796f",
-              color: "#ffffff",
-              textDecoration: "none",
-              transition: "all 0.2s ease-in",
-            },
-          }}>Print this certificate!</Button>}
-        content={() => componentRef.current}
-        documentTitle="Certificate of Net Zero Supply Chain"
-        pageStyle="@page {size: landscape;}"
 
-        />
-    </div>
     <div ref={componentRef} className="certificate" class="container" style={{border: '6px solid', padding: '2%', backgroundColor: '#f5f5f5'}}>
         <div className="certificate-header"><h1>Certification of Net Zero Supply Chain</h1></div>
         <div className="certificate-info">
@@ -51,6 +34,28 @@ const Certificate = () => {
             </div>
         
         </div>
+    </div>
+    <div className="print-button"style={{textAlign: 'center', marginBottom: '5px'}} >
+        <ReactToPrint
+        trigger={() => <Button variant="contained" sx={{
+            backgroundColor: "#354F52",
+            my: "5px",
+            "&:hover": {
+              backgroundColor: "#52796f",
+              color: "#ffffff",
+              textDecoration: "none",
+              transition: "all 0.2s ease-in",
+            },
+          }}>Print this certificate!</Button>}
+        content={() => componentRef.current}
+        documentTitle="Certificate of Net Zero Supply Chain"
+        pageStyle="@page {size: landscape;}"
+
+        />
+    </div>
+    <div className=" cert-info-wrapper">
+        <p>CarbonAltDel is a platform that helps restaurants offset their carbon emissions by purchasing carbon credits from verified projects. This certificate is issued to restaurants that have offset their supply chain's carbon emissions by purchasing carbon credits from CarbonAltDel. This certificate is valid for one year from the date of issue.</p>
+        
     </div>
     </> );
 }

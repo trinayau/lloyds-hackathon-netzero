@@ -153,16 +153,25 @@ function NavBar() {
           >
             CarbonAltDel
           </Typography>
+          {/* cart icon */}
+          <Box sx={{ display: { xs: 'flex', md: 'none', lg: 'none', xl: 'none' } }}>
+            <Tooltip title="Cart">
+              <IconButton
+                size="large"
+                aria-label="cart"
+                key={'cart'}
+                onClick={() => handleLink('/cart')}
+                sx={{ color: '#07060A', display: 'block', "&:hover": {
+                  color: '#52796f',
+                  textDecoration: 'none',
+                  transition: 'all 0.2s ease-in'} }}
+                >
+                <ShoppingCartIcon sx={{color: '#2E3E46'}}/>
+                </IconButton>
+            </Tooltip>
+          </Box>
+
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', lg: 'flex', xl: 'flex', flexDirection: "row",    justifyContent: "end" } }}>
-            {/* {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: '#07060A', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))} */}
             <Button
                 key={'products'}
                 onClick={() => handleLink('/products')}

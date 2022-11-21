@@ -41,7 +41,6 @@ const CategoryCardMUI = ({catName, catId, catImage, catPrice, catOffset, product
           </div> */}
           <Button
             variant="contained"
-            // href="/cart"
             style={{marginRight: '10px'}}
             sx={{
               mx: "30px",
