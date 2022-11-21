@@ -40,17 +40,17 @@ const HomePage = () => {
 
     <div className="about">
         <div className="about-text">
-        <h3>Welcome to carbon Alt Delete</h3>
-        <ol>
-            <li>After joining us you will be able to purchase  all your ingredients from sustainable suppliers and and can make intelligent choices based on each suppliers carbon rating</li>
-            <li>We calculate teh carbon footprint of every ingredient from all out auupliers and present it to you a an easy to understad way so you can easily order what you need adn from which supplier easily </li>
-            <li>We also offer to help help companies like you to offet your carbon footprint </li>
+        <h3>Welcome to Carbon Alt Delete</h3>
+        <ol class="text-decoration-none">
+            <li>After joining us you will be able to purchase your ingredients from sustainable suppliers and can make intelligent choices based on both the cost of ingredients and the amount needed to make your order net zero.</li>
+            <li>We calculate the carbon footprint of every ingredient from all of our suppliers and present it to you in a way that helps make the sustainable choice the easy choice. </li>
+            <li>Our carbon credits are purchased from verified projects that are helping to reduce carbon emissions in the world. </li>
         </ol>
         </div>
         <div className="register">
         <Button
             variant="contained"
-            href="/login"
+            href="/account"
             sx={{
               backgroundColor: "#354F52",
               my: "5px",

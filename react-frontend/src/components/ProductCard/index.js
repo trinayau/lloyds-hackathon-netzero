@@ -1,21 +1,21 @@
 import "./index.css";
 import Button from "@mui/material/Button";
 
-const ProductCard = ({ Image, Name, MinPrice, MinOffset, id }) => {
+const ProductCard = ({ image, name, price, offset, id }) => {
   return (
     <>
       <div className="product-box">
         <div className="product-img">
-          <img src={Image} alt="sugar" />
+          <img src={image} alt={name}/>
         </div>
         <div className="product-info">
-          <h4>{Name}</h4>
-          Price from: £{MinPrice}
+          <h4>{name}</h4>
+          Price from: £{price}
           <br />
-          Offset carbon from: £{MinOffset}
+          Offset carbon from: £{offset}
         </div>
         <div className="product-links">
-          <a className="compare-link"href={`/products/${id}/${Name}`}>Compare</a>
+          <a className="compare-link"href={`/products/${id}/${name}`}>Compare</a>
           {/* <div className="add-button" onClick={(e) => e.preventDefault}>
             ADD
           </div> */}

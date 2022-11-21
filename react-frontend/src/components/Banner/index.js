@@ -10,16 +10,31 @@ const Banner = ({MyVideo, buttonText}) => {
           position: "relative",
           flexDirection: "column",
         }}
+        
+        
       >
         <video
-          autoPlay
-          loop
-          muted
+          autoPlay={true} 
+          loop={true}
+          controls={false} 
+          playsInline
+          muted 
           src={MyVideo}
           className="video"
           type="video/mp4"
          
         />
+        {/* <div className="video" dangerouslySetInnerHTML={{ __html: `
+        <video
+          loop
+          muted
+          autoplay
+          playsinline
+          src="${MyVideo}"
+          style="min-height: 800px; object-fit: cover;"
+        />,
+      ` }}>
+          </div> */}
         <div className="content" style={{ justifyContent: "center", padding: '20px', textAlign:"center" }}>
           <h1>Helping Restaurants Go Net Zero</h1>
           <p>

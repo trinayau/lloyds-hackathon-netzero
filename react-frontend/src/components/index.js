@@ -6,3 +6,7 @@ export {default as SearchBar} from './SearchBar';
 export {default as BackButton} from './BackButton';
 export {default as Supplier} from './Supplier';
 export {default as CartCard} from './CartCard';
+export {default as SupplierCard} from './SupplierCard';
+export {default as Certificate} from './Certificate';
+export {default as ProductCardMUI} from './ProductCardMUI';
+export {default as CategoryCardMUI} from './CategoryCardMUI';
