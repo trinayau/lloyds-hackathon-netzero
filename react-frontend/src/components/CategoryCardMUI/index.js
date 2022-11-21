@@ -6,7 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-
+import Snackbar from '@mui/material/Snackbar';
 
 const CategoryCardMUI = ({catName, catId, catImage, catPrice, catOffset, product, dispatch}) => {
 
@@ -18,6 +18,7 @@ const CategoryCardMUI = ({catName, catId, catImage, catPrice, catOffset, product
 
     return (
       <Card sx={{ minWidth: '300px', maxWidth: 300 }}>
+        
         <CardMedia
           component="img"
           alt={catName}
