@@ -1,5 +1,6 @@
-# CarbonAltDelete - Lloyds x Athena Hackathon Submission
+# CarbonAltDelete - Lloyds x Athena Hackathon 2022 Submission 
 Lloyds Banking Group Athena Virtual Hackathon - Journey to Net Zero Entry by @trinayau and @Fuwa-Kei  
+
 <p align="center">
  <a href="https://carbonaltdel.com/">React Frontend</a> / <a href="https://lloyds-hackathon-server.vercel.app/">Django Backend</a> 
 </p>
